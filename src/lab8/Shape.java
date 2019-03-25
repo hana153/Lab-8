@@ -1,6 +1,13 @@
 package lab8;
 
-public enum Shape extends java.lang.Enum<Shape>
+public enum Shape
 {
-
+    THIMLBE(), BOOT(), RACECAR();
+    
+    public String toString()
+    {
+        return name().toLowerCase();
+        
+    }
+    
 }
