@@ -1,6 +1,6 @@
 package lab8;
 
-public enum Location extends java.lang.Enum<Location>
+public enum Location
 {
-
+    BALLROOM(), BILLIARD_ROOM(), CONSERVATORY(), DINING_ROOM(), HALL(), KITCHEN(), LIBRARY(), LOUNGE(), STUDY();
 }
