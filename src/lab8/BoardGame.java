@@ -71,7 +71,7 @@ public class BoardGame
         {
             playerLocations.put(firstPlayer, newLocations[1]); 
             
-            playerLocations.put(playerNames[1], newLocations[0]);
+            playerLocations.put(playerNames[0], newLocations[0]);
             
             String[] result = {firstPlayer, playerNames[0]};
             return result;
