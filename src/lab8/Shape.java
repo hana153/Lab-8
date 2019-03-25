@@ -2,7 +2,7 @@ package lab8;
 
 public enum Shape
 {
-    THIMLBE(), BOOT(), RACECAR();
+    THIMBLE(), BOOT(), RACECAR();
     
     public String toString()
     {
