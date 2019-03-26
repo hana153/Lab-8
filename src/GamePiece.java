@@ -46,7 +46,7 @@ public enum GamePiece
     // this returns the information of the piece being used
     public String toString()
     {
-        String result = String.format("%s: a %s %s with priority %d", this.name(), this.getColor(), this.getShape(),
+        String result = String.format("%s: a %s %s with priority %d", this.name(), this.getColor(), this.getShape().name(),
                 this.priority);
 
         return result;
