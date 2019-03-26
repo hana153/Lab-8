@@ -1,18 +1,20 @@
 
-
-public enum GamePiece 
+public enum GamePiece
 {
-    
+
     // creates the generic game pieces
-    BLUE_BOOT(new GamePieceAppearance(Color.BLUE, Shape.BOOT), 5), BLUE_RACER(new GamePieceAppearance(Color.BLUE, Shape.RACECAR), 2),
-    GREEN_BOOT(new GamePieceAppearance(Color.GREEN, Shape.BOOT), 8), MAGENTA_RACER(new GamePieceAppearance(Color.MAGENTA, Shape.RACECAR), 1),
-    RED_RACER(new GamePieceAppearance(Color.RED, Shape.RACECAR), 0), RED_THIMBLE(new GamePieceAppearance(Color.RED, Shape.THIMBLE), 10),
+    BLUE_BOOT(new GamePieceAppearance(Color.BLUE, Shape.BOOT), 5),
+    BLUE_RACER(new GamePieceAppearance(Color.BLUE, Shape.RACECAR), 2),
+    GREEN_BOOT(new GamePieceAppearance(Color.GREEN, Shape.BOOT), 8),
+    MAGENTA_RACER(new GamePieceAppearance(Color.MAGENTA, Shape.RACECAR), 1),
+    RED_RACER(new GamePieceAppearance(Color.RED, Shape.RACECAR), 0),
+    RED_THIMBLE(new GamePieceAppearance(Color.RED, Shape.THIMBLE), 10),
     YELLOW_BOOT(new GamePieceAppearance(Color.YELLOW, Shape.BOOT), 7);
-    
+
     private GamePieceAppearance appearance;
-    
+
     private int priority;
-    
+
     private GamePiece(GamePieceAppearance appearance, int priority)
     {
         this.appearance = appearance;
@@ -28,24 +30,26 @@ public enum GamePiece
     {
         return appearance.getShape();
     }
-    
+
     // piece with the lowest priority moves first
     public static GamePiece movesFirst(GamePiece a, GamePiece b)
     {
-        if (a.priority < b.priority) {
+        if (a.priority < b.priority)
+        {
             return a;
-        }
-        else {
+        } else
+        {
             return b;
         }
     }
-    
+
     // this returns the information of the piece being used
     public String toString()
     {
-        String result = String.format("%s: a %s %s with priority %d", this.name(), this.getColor(), this.getShape(), this.priority);
-        
+        String result = String.format("%s: a %s %s with priority %d", this.name(), this.getColor(), this.getShape(),
+                this.priority);
+
         return result;
     }
-    
+
 }
